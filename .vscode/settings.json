@@ -1,0 +1,22 @@
+{
+  "git.ignoreLimitWarning": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded", //compressed or expanded
+      "extensionName": ".compilado.css",
+      "savePath": "/css" //diretorio para salvar o arquivo .css
+    }
+  ],
+  // "liveSassCompile.settings.includeItems": [
+  //   "/dashboard/static/assets/sass/style.scss",
+  //   "/dashboard/static/assets/sass/pages/performance.scss",
+  //   "/dashboard/static/assets/sass/pages/page_login.scss"
+  //   //    "dashboard/static/login3/assets/sass/style-login.scss"
+  // ],
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.autoprefix": [
+    "> 1%"
+    // "last 2 versions"
+  ],
+  "liveSassCompile.settings.showOutputWindowOn": "Warning" // ctrl+shift+u
+}
