@@ -31,9 +31,9 @@ $sm-device: 480px;
 
 // Função do grid
 @function grid($col, $offset: false) {
-  $width: calc(($col / $cols) * 100) + "%";
+  $width: calc($col / $cols) * 100 + "%";
   $result: calc(#{$width} - #{$gutter});
-  @if $offset == $offset {
+  @if $offset == offset {
     $gutter: calc($gutter / 2);
     $result: calc(#{$width} + #{$gutter});
   }
@@ -98,12 +98,27 @@ $sm-device: 480px;
   }
   @include responsivo(sm) {
     max-width: $sm-device;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   @include clearfix;
 }
 
 .container {
   @include container;
+}
+
+@mixin row {
+  position: relative;
+  margin-left: calc(-#{$gutter} / 2);
+  margin-right: calc(-#{$gutter} / 2);
+  @include responsivo(sm) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  @include clearfix;
+}
+
+.row {
+  @include row;
 }
